@@ -55,12 +55,11 @@ Canal digital estruturado para captação de especificações de projetos, colet
 
 ## 🛠️ Tecnologias Utilizadas
 
-O projeto foi construído utilizando tecnologias robustas e consolidadas para a web, garantindo desempenho e facilidade de manutenção:
+O projeto foi construído utilizando tecnologias front-end modernas e consolidadas, garantindo desempenho e facilidade de manutenção:
 
-* **HTML5:** Estruturação semântica de todo o conteúdo.
-* **CSS3:** Estilização moderna, layouts responsivos e design fluido.
-* **PHP 8:** Processamento do lado do servidor (back-end), incluindo o gerenciamento do envio do formulário.
-* **Apache:** Servidor web para hospedagem e processamento da aplicação.
+* **HTML5:** Estruturação semântica e acessível de todo o conteúdo.
+* **CSS3:** Estilização moderna, layouts responsivos (mobile-first) e design fluido.
+* **JavaScript:** Interatividade e funcionalidades dinâmicas, incluindo validação de formulário, navegação suave e integração com redes sociais.
 * **Arquitetura Modular:** Organização de código limpa com a separação e reutilização de componentes globais (como `Header` e `Footer`), facilitando futuras manutenções e escalabilidade.
 
 ---
