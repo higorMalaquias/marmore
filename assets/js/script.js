@@ -87,7 +87,14 @@ const imagensProjetos = [
     "assets/img/projetos/projeto3.jpg",
     "assets/img/projetos/projeto4.jpg",
     "assets/img/projetos/projeto5.jpg",
-    "assets/img/projetos/projeto6.jpg"
+    "assets/img/projetos/projeto6.jpg",
+    "assets/img/projetos/projeto7.jpg",
+    "assets/img/projetos/projeto8.jpg",
+    "assets/img/projetos/projeto9.jpg",
+    "assets/img/projetos/projeto10.jpg",
+    "assets/img/projetos/projeto11.jpg",
+    "assets/img/projetos/projeto12.jpg",
+    "assets/img/projetos/projeto13.jpg"
 ];
 
 let indiceAtual = 0;
