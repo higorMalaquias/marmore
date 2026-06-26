@@ -180,3 +180,44 @@ if (imagemCarousel) {
     atualizarImagem();
 
 }
+
+// ==========================
+// AMPLIAR IMAGEM
+// ==========================
+
+const modal = document.getElementById("modal-imagem");
+const imagemAmpliada = document.getElementById("imagem-ampliada");
+const fecharModal = document.getElementById("fechar-modal");
+
+if (imagemCarousel) {
+
+    imagemCarousel.addEventListener("click", () => {
+
+        imagemAmpliada.src = imagemCarousel.src;
+        modal.style.display = "flex";
+
+    });
+
+}
+
+if (fecharModal) {
+
+    fecharModal.addEventListener("click", () => {
+
+        modal.style.display = "none";
+
+    });
+
+}
+
+if (modal) {
+
+    modal.addEventListener("click", (e) => {
+
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+
+    });
+
+}
