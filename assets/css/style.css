@@ -536,3 +536,31 @@ footer{
 .whatsapp-float{
     animation:pulseWhatsapp 2s infinite;
 }
+
+.lgpd-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 15px 0 20px;
+    text-align: left;
+}
+
+.lgpd-checkbox input {
+    margin-top: 4px;
+}
+
+.lgpd-checkbox label {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+.lgpd-checkbox a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.lgpd-checkbox a:hover {
+    text-decoration: underline;
+}
