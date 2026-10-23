@@ -1,54 +1,48 @@
-// Formulário de orçamento
 
+ 
+ // Formulário de orçamento
 const formulario = document.getElementById("orcamento-form");
 const mensagemSucesso = document.getElementById("mensagem-sucesso");
 
 if (formulario) {
+    formulario.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-formulario.addEventListener("submit", function (e) {
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const telefone = document.getElementById("telefone").value.trim();
+        const projeto = document.getElementById("mensagem").value.trim();
 
-    e.preventDefault();
-
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const telefone = document.getElementById("telefone").value;
-    const projeto = document.getElementById("projeto").value;
-
-    const mensagem = `Olá! Gostaria de solicitar um orçamento.
+        const mensagem = `Olá! Gostaria de solicitar um orçamento.
 
 Nome: ${nome}
 E-mail: ${email}
 Telefone: ${telefone}
 
 Projeto:
-${projeto}`;
+${projeto || "Não informado"}`;
 
-    const numeroWhatsapp = "5511983015080";
+        const numeroWhatsapp = "5511983015080";
 
-    const url =
-        `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
+        const url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
 
-    window.open(url, "_blank");
+        // Abre o WhatsApp após o envio do formulário
+        const novaAba = window.open(url, "_blank");
 
-    mensagemSucesso.innerHTML = `
-        <div style="
-            background:#d4edda;
-            color:#155724;
-            padding:15px;
-            margin-bottom:20px;
-            border-radius:8px;
-            text-align:center;
-            font-weight:bold;
-        ">
-            Redirecionando para o WhatsApp...
-        </div>
-    `;
+        // Alternativa caso o navegador bloqueie a nova aba
+        if (!novaAba) {
+            window.location.href = url;
+            return;
+        }
 
-    formulario.reset();
-
-});
-
+        if (mensagemSucesso) {
+            mensagemSucesso.textContent =
+                "Abrindo o WhatsApp para concluir sua solicitação...";
+        }
+    });
 }
+
+
 
 
 
